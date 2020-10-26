@@ -1,6 +1,17 @@
 {% extends "layout.html" %}
 {% block conteudo %}
-<div class="jumbotrom">
-    <h1>Contact Page</h1>
+<img src="{{url_for('static', filename='img/voluntarios.png')}}"
+    class="img-fluid" alt="Responsive image">
+
+<div class="jumbotron">
+    <h1>Equipe</h1>
+    <ul>
+        <li>Eduarda da Silva Medeiro</li>
+        <li>Emanoel Sérgio da Silva Monteiro</li>
+        <li>Mônica Naiane Valente Pereira</li>
+        <li>Luiz Vinicius Batista de Oliveira</li>
+        <li>Yara Oliveira dos Santos</li>
+    </ul>
 </div>
+
 {% endblock %}
