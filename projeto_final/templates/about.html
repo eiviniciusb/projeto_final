@@ -1,10 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sobre</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+    .jumbotron {
+
+    }
+</style>
+<body>
 {% extends "layout.html" %}
 {% block conteudo %}
 <img src="{{url_for('static', filename='img/voluntarios.png')}}"
-    class="img-fluid" alt="Responsive image">
-
+    class="img-fluid">
 <div class="jumbotron">
-    <h1>Equipe</h1>
+    <h2>Projeto</h2>
+    <p>Existem pessoas que não podem sair de casa por ter alguma limitação física,
+    ou fazer parte do grupo de risco. E foi pensando nisso que nós, alunos do curso de informática do IFCE, tivemos a ideia de desenvolver
+    um site que conecte essas pessoas com voluntários. Essa ferramenta será útil não só durante a pandemia,
+    mas também posteriormente para conectar pessoas em prol do bem.</p>
+    <h2>Quem somos?</h2>
+    <p>Nossa equipe é formada por 5 alunos do terceiro semestre de Informática do IFCE Campus Aracati.</p>
     <ul>
         <li>Eduarda da Silva Medeiro</li>
         <li>Emanoel Sérgio da Silva Monteiro</li>
@@ -13,5 +31,6 @@
         <li>Yara Oliveira dos Santos</li>
     </ul>
 </div>
-
+</body>
 {% endblock %}
+</html>
