@@ -4,14 +4,17 @@
 <head>
 
 <style>
-
+.carousel {
+    margin: 3;
+}
 </style>
 
 </head>
 
 <body>
 {% extends "layout.html" %}
-{% block conteudo %}
+{% block c %}
+<div class="carousel">
 <div id="carouselSite" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -32,6 +35,25 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+    </div>
+</div>
+<div class="container">
+    <div class= "titulo my-4">
+        <h2>Dúvidas Frequentes</h2>
+    </div>
+    <img src="{{url_for('static', filename='img/voluntarios.png')}}"
+    class="img-fluid">
+    <div class="jumbotron">
+    <h3>O que é trabalho voluntário?</h3>
+    <p>É todo tipo de trabalho feito de forma espontânea e livre, podendo ser de forma
+    coletiva ou individual, com o objetivo de ajudar o próximo.</p>
+    <h3>Quem pode ser voluntário?</h3>
+    <p>Sendo maior de idade, todos podem ser voluntários. Basta você ter um espiríto solidário
+    e vontade de ajudar as pessoas.</p>
+    <h3>Como começar a ajudar?</h3>
+    <p>Após efetuar o cadastro, você deve consultar o feed onde você irá encontrar diversos anúncios de pessoas que precisam de ajuda.
+    Após você selecionar um anúncio, você deve clicar em saber mais e depois verificar as informações para contato do usuário. Mediante
+    as informações, você deve entrar em contato com o usuário que publicou o anúncio e combinar como será feita a ajuda.</p>
 </div>
 {% endblock %}
 </body>

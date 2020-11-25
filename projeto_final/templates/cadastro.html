@@ -6,19 +6,16 @@
     <meta charset="UTF-8">
 </head>
 <style>
-    .content{
-        display:flex;justify-content: center}
-    .cadastro{
-        width: 100%;max-width: 500px;}
     .form-group {
         max-width: 500px;
+
     }
 </style>
 {% extends "layout.html" %}
 {% block conteudo %}
 <body>
-    <div class="cadastro my-4">
-    <h1>Cadastro</h1>
+    <div class="titulo my-4">
+    <h2>Cadastro</h2>
     </div>
     <form>
     <div class="form-row my-4">
@@ -81,8 +78,9 @@
         Desejo receber notificações no email
       </label>
     </div>
+    <button type="submit" class="btn btn-primary my-3">Prosseguir</button>
   </div>
-  <button type="submit" class="btn btn-primary">Cadastrar-me</button>
+
 </form>
 
 </body>

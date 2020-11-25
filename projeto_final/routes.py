@@ -22,3 +22,15 @@ def login():
 def cadastro():
     return render_template('cadastro.html')
 
+@app.route('/feed')
+def feed():
+    return render_template('feed.html')
+
+@app.route('/resetpass')
+def resetpass():
+    return render_template('resetpass.html')
+
+@app.route('/infoad')
+def infoad():
+    return render_template('infoad.html')
+
