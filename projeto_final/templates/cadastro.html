@@ -9,9 +9,6 @@
     .form-group {
         max-width: 500px;
     }
-    .form-check {
-
-    }
 </style>
 {% extends "layout.html" %}
 {% block conteudo %}
@@ -46,14 +43,6 @@
       <input type="password" class="form-control" id="inputPassword" placeholder="Crie uma senha">
     </div>
   </div>
-  <div class="form-group">
-    <label for="inputAddress">Endereço</label>
-    <input type="text" class="form-control" id="inputAddress">
-  </div>
-  <div class="form-group">
-    <label for="complemento">Complemento</label>
-    <input type="text" class="form-control" id="complemento">
-  </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity">Cidade</label>
@@ -74,16 +63,23 @@
     </div>
   </div>
   <div class="form-group">
+    <label for="inputAddress">Endereço</label>
+    <input type="text" class="form-control" id="inputAddress">
+  </div>
+  <div class="form-group">
+    <label for="complemento">Bairro</label>
+    <input type="text" class="form-control" id="complemento">
+  </div>
+  <div class="form-group">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck">
       <label class="form-check-label" for="gridCheck">
         Desejo receber notificações no email
       </label>
     </div>
-    <button type="submit" class="btn btn-primary my-3">Prosseguir</button>
+        <a class="btn btn-primary my-3" href="/infoad" role="button">Prosseguir</a>
   </div>
 </form>
 </body>
-
 {% endblock %}
 </html>

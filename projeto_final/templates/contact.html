@@ -8,15 +8,20 @@
 {% extends "layout.html" %}
 {% block conteudo %}
 <style>
-    .form-group {
-        max-width: 400px;
+    .form-signin {
+        width: 100%;
+        max-width: 420px;
+        padding: 15px;
+        margin: auto;
+    }
+    .btn {
+        text-align:center;
     }
 </style>
 <body>
-<div class="container">
+<div class="form-signin">
     <div class="titulo my-4">
         <h2>Fale Conosco</h2>
-    </div>
     <form class="my-4">
     <div class="form-group">
         <input class="form-control" name="name" placeholder="Nome">
@@ -29,8 +34,9 @@
     </div>
     <div class="form-group">
         <textarea class="form-control" name="mensage" placeholder="Digite sua mensagem aqui."></textarea>
-    </div class="btn">
-        <input class="btn btn-primary" type="submit" value="Enviar">
+    </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
     </div>
 </div>
 </body>
