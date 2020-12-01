@@ -14,6 +14,26 @@
     <div class="titulo my-3">
         <h1>Informações adicionais</h1>
     </div>
+    <form>
+<div class="form-row my-4">
+    <div class="mb-5">
+        <label for="datadenasc">Data de Nascimento</label>
+        <input type="text" class="form-control" id="datadenasc" placeholder="ex: 12/04/1985" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="inputYear">Selecione sua idade</label>
+      <select id="inputYear" class="form-control">
+        <option selected>Selecione sua idade</option>
+        <option>18-25</option>
+        <option>26-35</option>
+        <option>36-45</option>
+        <option>46-55</option>
+        <option>56-65</option>
+        <option>66-75</option>
+        <option>76-85</option>
+      </select>
+    </div>
+</div>
 </body>
 {% endblock %}
 </html>
