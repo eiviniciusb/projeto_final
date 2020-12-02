@@ -26,11 +26,15 @@ def cadastro():
 def feed():
     return render_template('feed.html')
 
-@app.route('/resetpass')
-def resetpass():
-    return render_template('resetpass.html')
+@app.route('/criaranuncio')
+def criaranuncio():
+    return render_template('criaranuncio.html')
 
 @app.route('/infoad')
 def infoad():
     return render_template('infoad.html')
+
+@app.route('/resetpass')
+def resetpass():
+    return render_template('resetpass.html')
 
