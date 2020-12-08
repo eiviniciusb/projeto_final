@@ -16,41 +16,33 @@
     <div class="titulo my-4">
     <h2>Cadastro</h2>
     </div>
-    <form>
+    <form action="/formcadastro" method="get">
     <div class="form-row my-4">
     <div class="form-group col-md-6">
       <label for="inputNome">Nome</label>
-      <input type="nome" class="form-control" id="inputNome">
+      <input type="text" class="form-control" name="nome">
     </div>
     <div class="form-group col-md-6">
       <label for="inputSobrenome">Sobrenome</label>
-      <input type="sobrenome" class="form-control" id="inputSobrenome">
-    </div>
-    <div class="form-check col-md-6">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        <label class="form-check-label" for="inlineRadio1">Voluntário</label>
-    </div>
-    <div class= "form-check col-md-6">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-        <label class="form-check-label" for="inlineRadio2">Não-voluntário</label>
+      <input type="text" class="form-control" name="sobrenome">
     </div>
     <div class="form-group col-md-6">
       <label for="inputEmail">Email</label>
-      <input type="email" class="form-control" id="inputEmail" placeholder="Digite seu e-mail">
+      <input type="email" class="form-control" name="email" placeholder="Digite seu e-mail">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword">Senha</label>
-      <input type="password" class="form-control" id="inputPassword" placeholder="Crie uma senha">
+      <input type="password" class="form-control" name="senha" placeholder="Crie uma senha">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity">Cidade</label>
-      <input type="text" class="form-control" id="inputCity">
+      <input type="text" class="form-control" name="cidade">
     </div>
     <div class="form-group col-md-4">
       <label for="inputState">Estado</label>
-      <select id="inputState" class="form-control">
+      <select rype="text" class="form-control" name="estado">
         <option selected>Selecione o Estado</option>
         <option>CE</option>
         <option>RN</option>
@@ -64,20 +56,20 @@
   </div>
   <div class="form-group">
     <label for="inputAddress">Endereço</label>
-    <input type="text" class="form-control" id="inputAddress">
+    <input type="text" class="form-control" name="endereco">
   </div>
   <div class="form-group">
     <label for="complemento">Bairro</label>
-    <input type="text" class="form-control" id="complemento">
+    <input type="text" class="form-control" name="complemento">
   </div>
   <div class="form-group">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <input type="checkbox" class="form-check-input" name="notificacao">
       <label class="form-check-label" for="gridCheck">
         Desejo receber notificações no email
       </label>
     </div>
-        <a class="btn btn-primary my-3" href="/infoad" role="button">Prosseguir</a>
+        <a type="button" class="btn btn-primary my-3" href="/infoad" role="button">Prosseguir</a>
   </div>
 </form>
 </body>
