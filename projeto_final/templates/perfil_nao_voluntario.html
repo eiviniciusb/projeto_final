@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Perfil</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+    .jumbotron {
+        background-color: #16395d!important;
+        color: #FFFFFF;
+    }
+</style>
+{% extends "layout.html" %}
+{% block conteudo %}
+<body>
+<div class="jumbotron my-4 text-center">
+    <img class="d-block mx-auto mb-1" src="{{url_for('static', filename='img/perfil-navbar.png')}}" alt="" width="92" height="92">
+    <h2>Nome Sobrenome, idade</h2>
+    <p class="bio">Biografia </p>
+    <a type="button" class="btn btn-warning my-3" href="/criaranuncio" role="button">Criar anúncio</a>
+</div>
+</body>
+{% endblock conteudo  %}
+</html>

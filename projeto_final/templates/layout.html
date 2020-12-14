@@ -11,7 +11,7 @@
     <title>Voluntariados</title>
     <style>
     .bg-navbar {
-        background-color: #16395D;
+        background-color: #16395d;
         }
     a {
         color: #FFFFFF;
@@ -28,7 +28,7 @@
         background-color: #F01353;
     }
     .footer {
-        background-color:#274360;
+        background-color: #274360;
         text-align: center;
         height: 50px;
         color: #FFFFFF;
@@ -39,39 +39,42 @@
       <header>
           <nav class="navbar navbar-light bg-navbar">
             <div>
-            <img class="logo"><a href="/home"><img src="{{url_for('static', filename='img/logotipo01.png')}}"></a>
+            <img class="logo"><a href="/home"><img src="{{url_for('static', filename='img/logo-navbar.png')}}" alt="" width="235" height="82"></a>
             </div>
             <ul class="nav">
-                <li class="nav-item my-3">
+                <li class="nav-item mr-auto my-3">
                     <a class="nav-link" href="/home">Home</a>
                 </li>
             <ul class="nav">
-                <li class="nav-item my-3">
-                    <a class="nav-link" href="/feed">Feed</a>
+                <li class="nav-item mr-auto my-3">
+                    <a class="nav-link" href="/feedvoluntario">Feed</a>
                 </li>
             <ul class="nav">
-                <li class="nav-item my-3">
+                <li class="nav-item mr-auto my-3">
                 <a class="nav-link" href="/contact">Contato</a>
                 </li>
             <ul class="nav">
-                <li class="nav-item my-3">
+                <li class="nav-item mr-auto my-3">
                 <a class="nav-link" href="/about">Sobre</a>
                 </li>
-            <li class="nav-item my-1">
+            <li class="nav-item mr-auto my-1">
             <div>
-            <img class="logo"><a href="/login"><img src="{{url_for('static', filename='img/user01.png')}}"></a>
+            <img class="logo"><a href="/login"><img src="{{url_for('static', filename='img/perfil-navbar.png')}}" alt="" width="72" height="70"></a>
+            </div
+
             </div>
-            </div>
-      </header>
+      </header
+
       <div class="c">
-        {% block c %} {% endblock %}
+        {% block c %} {% endblock  c %}
     </div>
     <div class="container">
-        {% block conteudo %} {% endblock %}
+        {% block conteudo %} {% endblock conteudo %}
     </div>
     <script src="/static/js/jquery-3.5.1.slim.min.js"></script>
     <script src="/static/js/bootstrap.bundle.min.js"></script>
   </body>
+
   <footer class="footer">
       <div>
           Copyright ©2020 - Todos os direitos reservados a TechTime.

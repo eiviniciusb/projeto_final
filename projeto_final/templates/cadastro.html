@@ -8,70 +8,84 @@
 <style>
     .form-group {
         max-width: 500px;
+        color: #FFFFFF;
     }
 </style>
 {% extends "layout.html" %}
 {% block conteudo %}
 <body>
     <div class="titulo my-4">
-    <h2>Cadastro</h2>
+    <h1>Cadastro</h1>
     </div>
-    <form action="/formcadastro" method="get">
+    <form action="/formcadastro" method="post">
     <div class="form-row my-4">
     <div class="form-group col-md-6">
       <label for="inputNome">Nome</label>
-      <input type="text" class="form-control" name="nome">
+      <input type="text" class="form-control" name="cad_nome">
     </div>
     <div class="form-group col-md-6">
       <label for="inputSobrenome">Sobrenome</label>
-      <input type="text" class="form-control" name="sobrenome">
+      <input type="text" class="form-control" name="cad_sobrenome">
     </div>
     <div class="form-group col-md-6">
       <label for="inputEmail">Email</label>
-      <input type="email" class="form-control" name="email" placeholder="Digite seu e-mail">
+      <input type="email" class="form-control" name="cad_email" placeholder="Digite seu e-mail">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword">Senha</label>
-      <input type="password" class="form-control" name="senha" placeholder="Crie uma senha">
+      <input type="password" class="form-control" name="cad_senha" placeholder="Crie uma senha">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity">Cidade</label>
-      <input type="text" class="form-control" name="cidade">
+      <input type="text" class="form-control" name="cad_cidade">
     </div>
     <div class="form-group col-md-4">
       <label for="inputState">Estado</label>
-      <select rype="text" class="form-control" name="estado">
+      <select type="text" class="form-control" name="cad_estado">
         <option selected>Selecione o Estado</option>
-        <option>CE</option>
-        <option>RN</option>
-        <option>PI</option>
-        <option>MA</option>
-        <option>SE</option>
-        <option>RE</option>
-        <option>BA</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espirito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
       </select>
     </div>
   </div>
   <div class="form-group">
     <label for="inputAddress">Endereço</label>
-    <input type="text" class="form-control" name="endereco">
+    <input type="text" class="form-control" name="cad_endereco">
   </div>
   <div class="form-group">
     <label for="complemento">Bairro</label>
-    <input type="text" class="form-control" name="complemento">
+    <input type="text" class="form-control" name="cad_complemento">
   </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" name="notificacao">
-      <label class="form-check-label" for="gridCheck">
-        Desejo receber notificações no email
-      </label>
-    </div>
         <a type="button" class="btn btn-primary my-3" href="/infoad" role="button">Prosseguir</a>
   </div>
 </form>
 </body>
-{% endblock %}
+{% endblock conteudo %}
 </html>

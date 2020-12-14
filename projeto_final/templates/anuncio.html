@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Anúncio</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+    .jumbotron {
+        background-color: #16395d!important;
+        color: #FFFFFF;
+    }
+</style>
+{% extends "layout.html" %}
+{% block conteudo %}
+<body>
+<div class="jumbotron my-4 text-left">
+    <h2>Descrição</h2>
+    <p class="bio">Descrição do anúncio</p>
+    <h2>Informações para contato</h2>
+    <p class="bio">Telefone: </p>
+    <p class="bio">Email: </p>
+    <div class="perfil-group">
+        <img class="d-block mb-1" src="{{url_for('static', filename='img/perfil-navbar.png')}}" alt="" width="92" height="92">
+    </div>
+    <div class="perfil-group float:left">
+        <a class="col-md-6" href="/infoad">Ver perfil</a>
+    </div>
+</div>
+</body>
+{% endblock conteudo  %}
+</html>

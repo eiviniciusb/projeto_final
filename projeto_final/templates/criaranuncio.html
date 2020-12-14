@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
 </head>
 <style>
-
+    .form-group {
+        max-width: 500px;
+        color: #FFFFFF;
+    }
 </style>
 {% extends "layout.html" %}
 {% block conteudo %}
@@ -14,34 +17,31 @@
     <div class="titulo my-3">
         <h1>Criar Anúncio</h1>
     </div>
-    <form action="formcriaranuncio" method="get">
-    <div class="form-row">
-    <div class="form-group col-md-6">
+    <form action="formcriaranuncio" method="post">
+    <div class="form-group">
       <label for="inputTítulo4">Título</label>
-      <input type="Título" class="form-control" id="inputTítulo4">
+      <input type="text" class="form-control" name="titulo_anuncio">
     </div>
-    <div class="form-group col-md">
+      <div class="form-group">
       <label for="exampleFormControlTextarea1">Descrição</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <textarea class="form-control" name="descricao_anuncio" placeholder="Descreva o anúncio..." rows="4"></textarea>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group">
       <label for="exampleFormControlFile1">Foto do anúncio</label>
-      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      <input type="file" class="form-control-file" name="imagem_anuncio">
     </div>
-    <p>Informações para contato</p>
-    <div class="form-group col-md-6">
+    <div class="form-group">
+        <h2>Informações para contato</h2>
       <label for="inputtelephone">Telefone</label>
-      <input type="telephone" class="form-control" name="telefone" placeholder="(DD)0000-0000">
+      <input type="telephone" class="form-control" name="telefone_contato"  placeholder="(DDD) 0000-0000">
     </div>
-    <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group">
       <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
-    </div>
+      <input type="email" class="form-control" name="email_contato">
     </div>
       <a type="button" class="btn btn-primary my-3" href="/infoad" role="button">Publicar</a>
     </div>
     </form>
 </body>
-{% endblock %}
+{% endblock conteudo  %}
 </html>
