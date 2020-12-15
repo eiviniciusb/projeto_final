@@ -1,5 +1,9 @@
-from projeto_final import app
-from flask import render_template, redirect, url_for, request
+from flask import render_template, redirect, url_for, request, current_app as app
+
+from datetime import datetime
+
+from projeto_final import db
+from projeto_final.entidades import Usuario
 
 @app.route('/')
 @app.route('/home')
@@ -63,15 +67,35 @@ def logar():
 
 @app.route('/formcadastro', methods=['POST'])
 def formcadastro():
-    nome = request.form['cad_nome']
-    sobrenome = request.form['cad_sobrenome']
+    nome_c = request.form['cad_nome']
+    sobrenome_c = request.form['cad_sobrenome']
     senha = request.form['cad_senha']
-    email = request.form['cad_email']
-    cidade = request.form['cad_cidade']
-    estado = request.form['cad_estado']
-    endereco = request.form['cad_endereco']
-    complemento = request.form['cad_complemento']
-    return redirect('/infoad')
+    email_c = request.form['cad_email']
+    cidade_c = request.form['cad_cidade']
+    estado_c = request.form['cad_estado']
+    endereco_c = request.form['cad_endereco']
+    complemento_C = request.form['cad_complemento']
+    
+    alguem = Usuario.query.filter_by(nome=nome_c).first()
+    
+    if alguem is not None:
+        session['mensagem'] = 'Usuário já cadastrado'
+        return redirect('/cadastro')
+    else:
+        novo = Usuario()
+        novo.nome = nome_c
+        novo.sobrenome = sobrenome_c
+        novo.senha = senha
+        novo.email = email_c
+        novo.cidade = cidade_c
+        novo.estado = estado_c
+        novo.endereco = endereco_c
+        novo.complemento = complemento_C
+
+        db.session.add(novo)
+        db.session.commit()
+
+        return redirect('/infoad')
 
 @app.route('/forminfo', methods=['POST'])
 def forminfo():
@@ -80,7 +104,23 @@ def forminfo():
     usuario = request.form['tipo_usuario']
     foto = request.form['foto_perfil']
     bio = request.form['biografia']
-    return redirect('/infoad')
+
+    alguem = Usuario.query.filter_by(nome=nome_c).first()
+    
+    if alguem is not None:
+        session['mensagem'] = 'Usuário já cadastrado'
+        return redirect('/cadastro')
+    else:
+#        novo = Usuario()
+        novo.nascimento = data_nascimento
+        novo.idade = idade
+        novo.foto = foto
+        novo.biografia = bio
+
+        db.session.add(novo)
+        db.session.commit()
+
+        return redirect('/sucess')
 
 @app.route('/formcriaranuncio', methods=['POST'])
 def formcriaranuncio():
